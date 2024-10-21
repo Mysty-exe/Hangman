@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang='en'>
+    <head>
+        <meta charset='utf-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <meta name='description' content='A simple HTML5 Template for new projects.'>
+        <meta name='author' content='Omar'>
+        <link rel='stylesheet' href='styles.css'>
+        <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap'>
+    </head>
+
+    <body>
+        <!-- your content here... -->
+        <h1 id='header'></h1>
+        <div class='content'></div>
+        <div class='img'>
+            <img id='img' src='#' alt='#'>
+        </div>
+        <form class='form' action='index.html'>
+            <input type="submit" id='submit' class='btn' value="Play Again">
+        </form>
+        <script type="text/javascript">
+            header = document.querySelector('#header');
+            image = document.querySelector('#img');
+            word = document.querySelector('.content');
+
+            document.title = `You ${localStorage.getItem('type')}!`;
+            header.innerHTML = `You ${localStorage.getItem('type')}!`;
+            word.innerHTML = `The word was ${localStorage.getItem('word')}`
+
+            if (localStorage.getItem('type') === 'Won') {
+                word.classList.add('info')
+                image.src = 'Imgs/Hangman Won.jpg';
+                image.alt = 'Congrats!';
+            }
+
+            else if (localStorage.getItem('type') === 'Lost') {
+                word.classList.add('error')
+                image.src = 'Imgs/Dead Stickman.png';
+                image.alt = 'F in chat';
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html lang='en'>
+    <head>
+        <meta charset='utf-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <meta name='description' content='A simple HTML5 Template for new projects.'>
+        <meta name='author' content='Omar'>
+        <link rel='stylesheet' href='styles.css'>
+        <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap'>
+        <title>Hangman</title>
+    </head>
+
+    <body>
+        <!-- your content here... -->
+        <h1>Hangman</h1><hr><br>
+        <h3 id='guesses'></h3>
+        <p class='content'></p>
+        <h2 id='word'></h2><br>
+        <div class="img">
+            <img id='img' src='Imgs/hangman6.png' alt='Image'>
+        </div>
+        <h3 id='guessed'></h3>
+        <form class='form' action='index.html'>
+            <label for="letter">Enter a letter:</label><br>
+            <input type="text" id="letter" name="letter"><br><br>
+            <input type="submit" id='submit' class='btn' value="Enter">
+        </form>
+        <script src='app.js'></script>
+    </body>
+</html>
